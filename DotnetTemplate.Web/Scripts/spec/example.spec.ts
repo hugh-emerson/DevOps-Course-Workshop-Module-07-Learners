@@ -1,4 +1,4 @@
-import { exampleTestedFunction } from '../home/example';
+import { exampleTestedFunction, exampleUntestedFunction } from '../home/example';
 
 describe('Example', () => {
   it('runs test', () => {
@@ -7,6 +7,16 @@ describe('Example', () => {
 
     // When
     exampleTestedFunction();
+
+    // Then
+    expect(one).toEqual(1);
+  });
+  it('runs second test', () => {
+    // Given
+    const one = 1;
+
+    // When
+    exampleUntestedFunction();
 
     // Then
     expect(one).toEqual(1);
