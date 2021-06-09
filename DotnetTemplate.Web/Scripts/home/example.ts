@@ -1,5 +1,7 @@
-function example() {
+export function exampleTestedFunction() {
   console.log('Hello world!');
 }
 
-example();
+export function exampleUntestedFunction() {
+  console.log('Hello world!');
+}
