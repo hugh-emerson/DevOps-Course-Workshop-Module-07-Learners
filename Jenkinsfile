@@ -21,7 +21,7 @@ pipeline {
                     sh "npm run build"
                     sh "npm run lint"
                     sh "npm run test-cov"
-                    publishCoverage adapters: [istanbulCoberturaAdapter(path: 'coverage/cobertura-coverage.xml', thresholds: [[thresholdTarget: 'Line', unhealthyThreshold: 25.0, unstableThreshold: 50.0]])], sourceFileResolver: sourceFiles('NEVER_STORE')
+                    publishCoverage adapters: [istanbulCoberturaAdapter(path: 'coverage/cobertura-coverage.xml', thresholds: [[failUnhealthy: true, thresholdTarget: 'Line', unhealthyThreshold: 30.0, unstableThreshold: 50.0]])], sourceFileResolver: sourceFiles('STORE_LAST_BUILD')
                 }
             }
         }
