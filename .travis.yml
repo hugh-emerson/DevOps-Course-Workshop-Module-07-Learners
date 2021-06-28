@@ -9,6 +9,6 @@ script:
 deploy:
   provider: script
   script: 
-    echo "$FOO"
+    echo $FOO && echo \$FOO && echo \\$FOO
   on:
     all_branches: true
