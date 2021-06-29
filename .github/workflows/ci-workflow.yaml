@@ -15,15 +15,15 @@ jobs:
       run: dotnet test
 
     - name: TypeSript build
-      working-directory: DotnetTemplate.Web
+      working-directory: ./DotnetTemplate.Web
       run: npm run build
       
     - name: TypeSript Test
-      working-directory: DotnetTemplate.Web
+      working-directory: ./DotnetTemplate.Web
       run: npm t
     
     - name: TypeSript Test
-      working-directory: DotnetTemplate.Web
+      working-directory: ./DotnetTemplate.Web
       run: npm run lint
       
       
