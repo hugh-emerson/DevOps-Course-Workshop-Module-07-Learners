@@ -10,11 +10,7 @@ jobs:
     
     - name: dotnet build
       run: dotnet build
-  
-  test:
-    name: C# Test
-    runs-on: ubuntu-latest
-    steps:
+
     - name: DotNet Test
       run: dotnet test
       
